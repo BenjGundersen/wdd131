@@ -3,55 +3,115 @@ header, footer {
     font-size: 20px;
     font-family: "Roboto", sans-serif;
     text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 
+.viewer {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.close-viewer {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    justify-self: end;
+    padding: 10px;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    
 }
 
 footer {
     text-align: left;
+    padding-left: 5em;
 }
 
 main {
     text-align: center;
     font-family: "Roboto", sans-serif;
 }
+
 img {
 	max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
-    border: 1rem solid wheat;
+    border: 1rem solid rgb(238, 238, 238);
+    filter: drop-shadow(0 0 1rem black);
 }
 
 body {
     margin: 0;
 }
 
+.navmenu {
+    display: none;
+}
+
+.navmenu.hide {
+    display: none;
+}
+
 @media screen and (max-width: 500px){
     .navmenu a {
         display: block;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
     }
 }
 
 @media screen and (min-width: 500px){
     .navmenu a {
-        display: none;
+        display: contents;
     }
 
     .gallery {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .viewer {
+        margin: 5rem;
     }
 }
 
 @media screen and (min-width: 1000px){
     .navmenu a {
         display: contents;
+        
     }
 
     .gallery {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    #menuButton {
+        display: none;
+    }
+}
+
+.navmenu.show {
+    display: block;
+}
+
+.viewer img {
+    border: none;
+    max-width: 75%;
+    max-height: 75%;
 }
