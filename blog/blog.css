@@ -47,8 +47,20 @@ h1 {
 }
 
 main {
-    grid-template-columns: 18rem 25rem 10rem;
+    grid-template-columns: 15rem 25rem 10rem;
     display: grid;
     font-family: "Roboto";
 }
+
+#articledate {
+    font-size: 20px;
+}
+
+#leftside {
+    text-align: end;
+    padding-right: 5rem;
+    line-height: 1em;
+    border-right: solid 1px var(--secondary-color);
+}
+
 
