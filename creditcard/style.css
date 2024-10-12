@@ -66,6 +66,11 @@
     height: 25px;
 }
 
+#cardNumber {
+    height: 25px;
+    width: 150%;
+}
+
 .card-name {
     grid-column: 1;
     grid-row: 3;
