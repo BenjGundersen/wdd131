@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Book</title>
+    <meta name="description" content="Collection of recipes that are searchable">
+    <meta name="author" content="BenG">
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Collection of recipes that are searchable">
+    <meta property="og:image" content="images/roasted-potatoes.webp">
+    <meta property="og:url" content="https://benjgundersen.github.io/wdd131/recipes/index.html">
+    <meta name="twitter:card" content="summary_large_image">
     <script src="main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="recipes.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 <body> 
     <header>
@@ -28,22 +37,25 @@
     <main>
         <div class="recipecontainer">
             <img src="images/sweet-potato-waffle-md.jpg" alt="">
-
-            <div class="tagcontainer">
-                <button>waffle</button>
+            
+            <div class="recipedetailscontainter">
+                <div class="tagcontainer">
+                    <button>waffle</button>
+                </div>
+    
+                <h2>Sweet Potato Waffles</h2>
+    
+                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+    
+                <p>description</p>
             </div>
 
-            <h2>Sweet Potato Waffles</h2>
-
-            <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star-empty">⭐</span>
-                <span aria-hidden="true" class="icon-star-empty">☆</span>
-            </span>
-
-            <p>description</p>
         </div>
     </main>
 
