@@ -12,7 +12,7 @@
     <meta property="og:image" content="images/roasted-potatoes.webp">
     <meta property="og:url" content="https://benjgundersen.github.io/wdd131/recipes/index.html">
     <meta name="twitter:card" content="summary_large_image">
-    <script src="main.js" defer></script>
+    <script src="main.js" defer type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
@@ -29,34 +29,12 @@
         <div class="searchbarcontainer">
             <form class="search" id="search" action="">
                 <input type="text" name="searchbar" id="searchbar" placeholder="Find a recipe">
-                <img class="searchicon" src="images/search.svg" alt="">
+                <button class="searchicon" aria-label="search button"><img src="images/search.svg" alt=""></button>
             </form>
         </div>
     </header>
 
     <main>
-        <div class="recipecontainer">
-            <img src="images/sweet-potato-waffle-md.jpg" alt="">
-            
-            <div class="recipedetailscontainter">
-                <div class="tagcontainer">
-                    <button>waffle</button>
-                </div>
-    
-                <h2>Sweet Potato Waffles</h2>
-    
-                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
-                </span>
-    
-                <p>description</p>
-            </div>
-
-        </div>
     </main>
 
     <footer>

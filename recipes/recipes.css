@@ -33,6 +33,7 @@ header {
 
 .searchbarcontainer {
     display: flex;
+    justify-content: center;
     flex-flow: row nowrap;
     border-bottom: 2px solid gray;
     margin-bottom: 10px;
@@ -42,21 +43,37 @@ header {
 
 .search {
     margin-top: 15px;
+    max-width: 960px;
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center;
     border: solid 1px gray;
     border-radius: 5px;
     margin-bottom: 15px;
     height: 40px;
+    overflow: hidden;
 }
 
-#searchbar {
-    flex: auto
+.search input {
+    flex: 1;
+    height: 100%;
 }
-.searchicon {
-    margin: 5px;
+
+.search button.searchicon {
+    background: none;
+    border: none; /* Remove default button border */
+    padding: 8px; /* Adjust for better icon spacing */
+    display: flex;
+    align-items: center; /* Center the icon vertically */
+    justify-content: center; /* Center the icon horizontally */
+    cursor: pointer; /* Change the cursor to pointer for better UX */
+}
+
+.search button.searchicon img {
+    width: 20px; /* Adjust icon size as needed */
+    height: 20px;
 }
 
 .recipecontainer {
@@ -86,7 +103,7 @@ h2 {
     display: flex;
     flex-flow: wrap row;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .social a{
@@ -110,12 +127,8 @@ h2 {
 }
 
 @media screen and (min-width: 600px) {
-    #searchbar {
-        width: 27em;
-    }
-
     .recipecontainer {
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
     }
 
     .recipecontainer img {
@@ -142,7 +155,7 @@ h2 {
     }
 
     .recipecontainer {
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         max-width: 960px;
         margin: 0 auto;
     }
