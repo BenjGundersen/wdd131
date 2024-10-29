@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Details</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Rexburg FGC</a></h1>
+        <nav class="navbarContainer">
+            <a href="#about">About</a>
+            <a href="#Contact">Contact</a>
+    </nav>
+    </header>
+    <main>
+        <h1 id="videoTitle"></h1>
+        <iframe id="videoPlayer" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        <p id="videoDescription"></p>
+    </main>
+    
+    
+
+    <script type="module">
+        import videos from "./content.mjs";
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        function displayVideoDetails() {
+            const videoId = getQueryParam('id');
+            const video = videos[videoId];
+
+            if (video) {
+                document.getElementById('videoTitle').innerText = video.name;
+                document.getElementById('videoPlayer').src = video.url;
+                // You can add more descriptions if needed
+                document.getElementById('videoDescription').innerText = `Game: ${video.game}\nCompetitors: ${video.competitors.join(', ')}`;
+            } else {
+                document.getElementById('videoTitle').innerText = "Video not found!";
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        displayVideoDetails();
+    </script>
+</body>
+</html>

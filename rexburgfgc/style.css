@@ -1,0 +1,112 @@
+:root {
+  /* color and font variables */
+  --primary-color: #E15554;
+  --secondary-color: #818AA3;
+  --accent1-color: #000000;
+  --accent2-color: #44FFD1;
+  --heading-font: Tahoma;
+  --paragraph-font: Arial;
+  --headline-color-on-white: var(--primary-color);
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: var(--primary-color);
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--accent1-color);
+  --nav-background-color: var(--primary-color);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: var(--secondary-color);
+}
+
+* {
+  font-size: 20px;
+  font-family: var(--paragraph-font);
+}
+
+h1 a {
+  font-family: var(--heading-font);
+  margin-top: 20px; /* Space above the link */
+  text-decoration: none; /* Remove underline */
+  color: white; /* Change link color */
+  font-weight: bold; /* Make link bold */
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  list-style-type: none;
+  display: flex;
+}
+
+nav a {
+  padding: 10px;
+  min-width: 120px;
+  text-decoration: none;
+  color: var(--nav-link-color);
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two videos per row */
+  gap: 10px;
+  max-width: 70%;
+}
+
+.galleryContainer figure {
+  flex: 1 1 calc(50% - 10px);
+}
+
+.galleryContainer iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+}
+.infoContainer {
+  flex: 1;
+  max-width: 30%;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.infoContainer p {
+  color: var(--headline-color-on-color);
+}
+
+.aboutInfoContainer {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 30%;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.aboutInfoContainer p {
+  color: var(--headline-color-on-color);
+}
+
