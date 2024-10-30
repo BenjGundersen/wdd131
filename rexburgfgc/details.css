@@ -11,9 +11,9 @@
     --paragraph-color-on-white: var(--primary-color);
     --paragraph-color-on-color: white;
     --paragraph-background-color: var(--primary-color);
-    --nav-link-color: var(--accent1-color);
+    --nav-link-color: white;
     --nav-background-color: var(--primary-color);
-    --nav-hover-link-color: white;
+    --nav-hover-link-color: var(--accent1-color);
     --nav-hover-background-color: var(--secondary-color);
 }
   
@@ -21,6 +21,7 @@
     font-size: 20px;
     font-family: var(--paragraph-font);
 }
+  
 
 header {
     background-color: var(--primary-color);
@@ -29,6 +30,14 @@ header {
     grid-template-columns: auto auto;
     justify-content: space-between;
     padding: 1rem;
+}
+
+h1 a{
+    font-family: var(--heading-font);
+    margin-top: 20px; /* Space above the link */
+    text-decoration: none; /* Remove underline */
+    color: white; /* Change link color */
+    font-weight: bold; /* Make link bold */
 }
 
 nav {
@@ -48,6 +57,7 @@ nav a:hover {
 color: var(--nav-hover-link-color);
 background-color: var(--nav-hover-background-color);
 }
+
 main {
     display: flex;
     flex-direction: column;
@@ -61,10 +71,11 @@ main {
 iframe {
     max-width: 100%; 
 }
-a {
-    font-family: var(--heading-font);
-    margin-top: 20px; /* Space above the link */
-    text-decoration: none; /* Remove underline */
-    color: white; /* Change link color */
-    font-weight: bold; /* Make link bold */
+
+.videoContainer {
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
